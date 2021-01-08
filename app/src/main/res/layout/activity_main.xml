@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/myImage"
+        android:layout_width="0dp"
+        android:layout_height="248dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <EditText
+        android:id="@+id/uriImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Введите адрес картинки"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/myImage"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/myImage"
+        app:layout_constraintTop_toBottomOf="@+id/myImage" />
+
+    <Button
+        android:id="@+id/btnLoadImage"
+        android:layout_width="253dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:onClick="onClickLoadImage"
+        android:text="Загрузить картинку"
+        app:layout_constraintEnd_toEndOf="@+id/uriImage"
+        app:layout_constraintTop_toBottomOf="@+id/uriImage" />
+</androidx.constraintlayout.widget.ConstraintLayout>
