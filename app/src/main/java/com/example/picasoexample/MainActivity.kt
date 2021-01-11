@@ -2,11 +2,11 @@ package com.example.picasoexample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.squareup.picasso.Picasso
 
 class MainActivity : AppCompatActivity() {
@@ -27,14 +27,17 @@ class MainActivity : AppCompatActivity() {
 
         val mUrl = uriImage!!.text.toString()
 
-        if(!TextUtils.isEmpty(mUrl)) {
+        if(!mUrl.isBlank()) {
             //Picasso.get().load("http://i.imgur.com/DvpvklR.png")
             Picasso.get().load(mUrl)
                 .error(R.drawable.ic_launcher_background)
                 .into(myImage)
         }
         else {
-            Toast.makeText(this,"Не задан адрес картинки.",Toast.LENGTH_LONG)
+            val dlg = AlertDialog.Builder(this)
+            dlg.setTitle("Ошибка")
+            dlg.setMessage("Путь к изображению должен быть заполнен.")
+            dlg.show()
         }
 
     }

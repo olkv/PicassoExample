@@ -42,4 +42,5 @@
         android:text="Загрузить картинку"
         app:layout_constraintEnd_toEndOf="@+id/uriImage"
         app:layout_constraintTop_toBottomOf="@+id/uriImage" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
